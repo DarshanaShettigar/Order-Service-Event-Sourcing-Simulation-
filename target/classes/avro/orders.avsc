@@ -1,0 +1,28 @@
+{
+    "namespace" : "com.orderevent.dto",
+    "type" : "record",
+    "name" : "OrderCreatedEvent",
+    "fields" : [
+        {
+            "name" : "orderId",
+            "type" : "string"
+        },
+        {
+            "name" : "status",
+            "type" : {
+                "type" : "enum",
+                "name" : "OrderStatus",
+                "symbols" : ["UNKNOWN", "CREATED", "CONFIRMED", "SHIPPED", "DELIVERED"]
+            },
+            "default" : "UNKNOWN"
+        },
+        {
+            "name" : "details",
+            "type" : "string"
+        },
+        {
+            "name" : "localdatetime",
+            "type" : "string"
+        }
+    ]
+}
